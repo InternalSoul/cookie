@@ -168,7 +168,7 @@ function renderDialogOptions() {
 }
 
 function goBack() {
-  window.location.href = "game.html";
+  window.location.href = "index.html";
 }
 
 function resetDialog() {
