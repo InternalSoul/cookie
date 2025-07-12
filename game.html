@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Heist Mystery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop autoplay>
+  <source src="music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div id="cookie-container"></div>
+
+<h1>🍪 Cookie Heist Mystery</h1>
+<p style="text-align: center;">Interview suspects and deduce who stole the Ginger Cookie.</p>
+
+<div class="game-container">
+  <div class="card">
+    <h3>Suspects</h3>
+    <div id="characterButtons"></div>
+  </div>
+
+  <div class="card">
+    <h3>Notebook</h3>
+    <textarea id="notepad"  placeholder="Write down clues here..."></textarea>
+
+  </div>
+
+  <div class="card">
+    <h3>Who stole the Ginger Cookie?</h3>
+    <select id="guessSelect" class="styled-select">
+      <option value="">-- Choose --</option>
+    </select>
+    <button onclick="makeGuess()">Submit Guess</button>
+    <p id="result" style="font-weight: bold;"></p>
+  </div>
+  
+</div>
+<div class="floating-controls">
+  <button class="deduction-float" onclick="openDeduction()">🧠</button>
+  <button class="deduction-float" onclick="showHint()">💡</button>
+  <button class="deduction-float" onclick="toggleMusic()" >🔊</button>
+</div>
+
+
+<div class="overlay" id="hintOverlay" onclick="closeHint()"></div>
+<div class="deduction-popup" id="hintPopup">
+  <h3>Hint</h3>
+  <p id="hintText">Here’s a clue to help you crack the cookie mystery!</p>
+  <button onclick="closeHint()">Close</button>
+</div>
+
+
+<div class="overlay" id="deductionOverlay" onclick="closeDeduction()"></div>
+<div class="deduction-popup" id="deductionPopup">
+  <h3>Deduction Grid</h3>
+  <div class="tabs" id="tabs"></div>
+  <div id="tabContent"></div>
+  <button onclick="closeDeduction()">Close</button>
+  
+</div>
+<div class="overlay" id="winOverlay" onclick="closeWinPopup()"></div>
+<div class="deduction-popup" id="winPopup">
+  <h2>🎉 You Solved the Mystery!</h2>
+  <p>You caught the Ginger Cookie thief. Great job, detective!</p>
+  <button onclick="closeWinPopup()">Play Again</button>
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</body>
+</html>
