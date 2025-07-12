@@ -123,11 +123,11 @@ const dialogTrees = {
 
 
 const portraits = {
-  "Holly": "suspects/holly.png",
-  "Cameron": "suspects/cameron.jpg",
-  "Julieanne": "suspects/julieanne.png",
-  "Alex": "suspects/alex.jpg",
-  "Jackie": "suspects/jackie.webp"
+  "Holly": "suspects/Holly.png",
+  "Cameron": "suspects/Cameron.jpg",
+  "Julieanne": "suspects/Julieanne.png",
+  "Alex": "suspects/Alex.jpg",
+  "Jackie": "suspects/Jackie.webp"
 };
 
 const params = new URLSearchParams(window.location.search);
